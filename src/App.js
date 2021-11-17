@@ -1,7 +1,11 @@
 import { Router } from './components/Router';
 import './App.css';
 
-function App() {
+
+const App = () => {
+
+
+
   return (
     <div className="App">
       <Router />
