@@ -9,7 +9,7 @@ export const Home = () => {
 
     useEffect(() => {
         dispatch(getCurrentAll());
-    }, [])
+    }, [dispatch])
 
     const currentAllData = useSelector(state => state.covidData.currentAll);
     console.log(currentAllData);

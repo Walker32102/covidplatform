@@ -15,7 +15,7 @@ export const Worldmeters = (props) => {
         if (input) {
             dispatch(getCurrentCountriesC(input));
         }
-    }, [input])
+    }, [dispatch, input])
 
     const currentData = useSelector(state => state.covidData.currentCountriesC);
     console.log(currentData);
@@ -26,7 +26,7 @@ export const Worldmeters = (props) => {
             <div className='Home-Containers Home-TotalCounterContainer'>
                 <div className='Home-TotalCounter'>
 
-                    <h1>WOLRDMETERS</h1>
+                    <h1>WORLDMETERS</h1>
 
                     <div className='Home-Total'>
 

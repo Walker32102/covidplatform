@@ -22,6 +22,11 @@ header{
   display: flex;
   user-select: none;
   margin-bottom: 10px;
+  /* display: none; */
+}
+
+.optionsMenu{
+  display: none;
 }
 
 .header-section{
@@ -92,4 +97,18 @@ header{
   color: #b7c3db;
   font-weight: bold;
   font-size: 20px;
+}
+
+.header-submenu{
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  margin: 5px;
+  background-color: #1a202b;
+  z-index: 1;
+  display: none;
+}
+
+.burgerMenuIcon:hover .header-submenu{
+  display: inline-block;
 }

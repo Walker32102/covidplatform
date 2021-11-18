@@ -1,7 +1,9 @@
 import '../App.css'
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
-import logo from '../assets/img/corona.png'
+import logo from '../assets/img/corona.png';
+import menu from '../assets/svg/menu.svg';
 import { ReactComponent as SearchLogo } from '../assets/svg/search.svg'
+import { ReactComponent as Menu } from '../assets/svg/menu.svg'
 import { Home, Worldmeters } from './components';
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
@@ -44,7 +46,15 @@ export const Router = () => {
 
                     <div className='header-section sections'>
                         <Link className='section-links' style={{ fontWeight: 'bold' }} to='/'>Home</Link>
-                        <Link className='section-links' to='/wolrdmeters'>Worldmeters</Link>
+                        <Link className='section-links' to='/worldmeters'>Worldmeters</Link>
+                    </div>
+
+                    <div className= 'header-section optionsMenu'>
+                        {/* <Menu width='35' className='burgerMenuIcon' style={{color: '#fff'}} /> */}
+                        <img src={menu} width='35' className='burgerMenuIcon' style={{color: '#fff'}} />
+                        <div className='header-submenu'>
+
+                        </div>
                     </div>
 
                     <div className='header-section searchBar'>
@@ -63,7 +73,7 @@ export const Router = () => {
 
                 <Routes>
                     <Route path='/' exact element={<Home />} />
-                    <Route path='/wolrdmeters' exact element={<Worldmeters input={code} />} />
+                    <Route path='/worldmeters' exact element={<Worldmeters input={code} />} />
                 </Routes>
             </BrowserRouter>
         </div>

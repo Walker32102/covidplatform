@@ -56,6 +56,7 @@
     color: #fff;
     font-size: 40px;
     margin-bottom: 10px;
+    user-select: none;
 }
 
 .Home-Total{
@@ -67,6 +68,7 @@
     font-size: 18px;
     font-weight: bold;
     margin: 5px 0;
+    user-select: none;
 }
 
 .Home-TotalCasesGrid{
@@ -91,6 +93,7 @@
     color: #fff;
     text-align: center;
     font-size: 18px;
+    user-select: none;
 }
 
 .Home-TodayCasesGrid{
@@ -114,4 +117,47 @@
     color: #fff;
     text-align: center;
     font-size: 18px;
+}
+
+@media (max-width: 930px) {
+
+    #root {
+        height: auto;
+    }
+
+    .Home{
+        flex-direction: column;
+    }
+
+    .Home-OthersContainer{
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .optionsMenu{
+        width: 60px;
+        /* background-color: #fff; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .burgerMenuIcon{
+        color: #fff;
+    }
+
+
+    .searchInputContainer{
+        width: 100%;
+    }
+    .logoContainer{
+        margin: 0;
+        width: auto;
+    }
+    .logoContainer>span{
+        display: none;
+    }
+    .sections{
+        display: none;
+    }
 }
