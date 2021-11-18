@@ -3,7 +3,6 @@ import { getCountryCode, getCurrentAll, getCurrentCountriesC } from '../../store
 import { useEffect, useState } from 'react';
 import '../Home/Home.css';
 
-
 export const Worldmeters = (props) => {
 
     const input = props.input.toLowerCase();
@@ -74,6 +73,7 @@ export const Worldmeters = (props) => {
             </div>
 
             <div className='Home-Containers Home-OthersContainer'>
+
                 <div className='Home-TotalCounter' style={{ marginBottom: '10px' }}>
                     <h1>Today</h1>
                     <div className='Home-Total'>
