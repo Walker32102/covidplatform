@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { getCountryCode, getCurrentAll, getCurrentCountriesC } from '../../store/corona/action';
+import { getCurrentAll } from '../../store/corona/action';
 import { useEffect, useState } from 'react';
 import './Home.css';
 
