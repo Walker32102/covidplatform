@@ -12,6 +12,17 @@ export const currentCountriesC = (e) => { return { type: 'currentCountriesC', va
 // Specific Coutry (Historical 30days)
 export const historyCountriesC = (e) => { return { type: 'historyCountriesC', value: e } }
 
+// All Countries Vaccine Converage (Last day possible)
+export const allVaccineCoverage = (e) => { return { type: 'allVaccineCoverage', value: e } }
+
+// Specific Countriy's Vaccine Converage (Last day possible)
+export const countryVaccineCoverage = (e) => { return { type: 'countryVaccineCoverage', value: e } }
+
+// Specific Countriy's Historical Vaccine Converage (Last 30 day possible)
+export const historicalCountriesVaccineCoverage = (e) => { return { type: 'historicalCountriesVaccineCoverage', value: e } }
+
+// Specific Countriy's Historical Vaccine Converage (Last 30 day possible)
+export const historicalCountryVaccineCoverage = (e) => { return { type: 'historicalCountryVaccineCoverage', value: e } }
 /* ------------------------------------------------------------------------------------------------------------------------------------- */
 
 // Gets the Country Code
@@ -81,6 +92,63 @@ export const getHistoryCountriesC = (countryCode) => {
             })
             .catch(e => {
                 console.error(e);
+            })
+    }
+}
+
+// Get All Vaccine Information (Last day possible)
+export const getVaccineCoverage = () => {
+    return function (dispatch) {
+        axios.get('https://disease.sh/v3/covid-19/vaccine/coverage?lastdays=1&fullData=true')
+            .then(res => {
+                console.log(res.data);
+                dispatch(allVaccineCoverage(res.data))
+            })
+            .catch(e => {
+                console.log(e);
+            })
+    }
+}
+
+// Get All Vaccine Information for a specific country (Last day possible)
+export const getCountryVaccineCoverage = (country) => {
+    return function (dispatch) {
+        axios.get(`https://disease.sh/v3/covid-19/vaccine/coverage/countries/${country}?lastdays=1&fullData=true`)
+            .then(res => {
+                console.log(res.data);
+                dispatch(allVaccineCoverage(res.data))
+            })
+            .catch(e => {
+                console.log(e);
+            })
+    }
+}
+
+
+// Get All historical info about Vaccine Coverage (Last 30 days possible)
+export const getHistoricalCountriesVaccineCoverage = () => {
+    return function (dispatch) {
+        axios.get(`https://disease.sh/v3/covid-19/vaccine/coverage?lastdays=30&fullData=true`)
+            .then(res => {
+                console.log(res.data);
+                dispatch(historicalCountryVaccineCoverage(res.data))
+            })
+            .catch(e => {
+                console.log(e);
+            })
+    }
+}
+
+// Get All historical info about Vaccine Coverage for a specific country (Last 30 days possible)
+export const getHistoricalCountryVaccineCoverage = (country) => {
+    return function (dispatch) {
+        axios.get(`https://disease.sh/v3/covid-19/vaccine/${country}?lastdays=30&fullData=true`)
+            .then(res => {
+                console.log(res.data);
+                dispatch(historicalCountryVaccineCoverage(res.data))
+            })
+            .catch(e => {
+                console.log(e);
             })
     }
 }
