@@ -143,9 +143,15 @@
     }
 
     .burgerMenuIcon{
-        color: #fff;
+        color: #b7c3db;
+        font-size: 25px;
     }
-
+    .burgerMenuIcon:hover{
+        cursor: pointer;
+    }
+    .burgerMenuIcon:hover .header-submenu{
+        display: block;
+    }
 
     .searchInputContainer{
         width: 100%;

@@ -101,14 +101,10 @@ header{
 
 .header-submenu{
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   margin: 5px;
   background-color: #1a202b;
   z-index: 1;
   display: none;
-}
-
-.burgerMenuIcon:hover .header-submenu{
-  display: inline-block;
 }

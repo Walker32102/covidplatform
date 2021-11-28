@@ -1,13 +1,13 @@
 import '../App.css'
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 import logo from '../assets/img/corona.png';
-import menu from '../assets/svg/menu.svg';
-import { ReactComponent as SearchLogo } from '../assets/svg/search.svg'
-import { ReactComponent as Menu } from '../assets/svg/menu.svg'
+import { ReactComponent as SearchLogo } from '../assets/svg/search.svg';
 import { Home, Worldmeters } from './components';
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import debounce from 'lodash.debounce';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export const Router = () => {
 
@@ -26,7 +26,7 @@ export const Router = () => {
     }
 
     const saveDebounce = useCallback(
-        debounce((value) => setSearchInput(value), 1000)
+        debounce((value) => setSearchInput(value), 500)
     )
 
     const onHandleChange = (e) => {
@@ -49,9 +49,8 @@ export const Router = () => {
                         <Link className='section-links' to='/worldmeters'>Worldmeters</Link>
                     </div>
 
-                    <div className= 'header-section optionsMenu'>
-                        {/* <Menu width='35' className='burgerMenuIcon' style={{color: '#fff'}} /> */}
-                        <img src={menu} width='35' className='burgerMenuIcon' style={{color: '#fff'}} />
+                    <div className='header-section optionsMenu'>
+                        <FontAwesomeIcon icon={faBars} className='burgerMenuIcon' />
                         <div className='header-submenu'>
 
                         </div>
