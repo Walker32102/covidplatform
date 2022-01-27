@@ -1,18 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getCurrentAll } from '../../store/corona/action';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './Home.css';
 
 export const Home = () => {
 
     const dispatch = useDispatch();
 
+    const { currentAll } = useSelector(state => state.covidData);
+
     useEffect(() => {
         dispatch(getCurrentAll());
     }, [dispatch])
-
-    const currentAllData = useSelector(state => state.covidData.currentAll);
-    console.log(currentAllData);
 
     return (
         <div className='Home'>
@@ -25,37 +24,37 @@ export const Home = () => {
                     <div className='Home-Total'>
 
                         <p>Total Cases</p>
-                        <div className='Home-Counter1'><span style={{ fontWeight: 'bold' }}>{currentAllData.cases}</span></div>
+                        <div className='Home-Counter1'><span style={{ fontWeight: 'bold' }}>{currentAll.cases}</span></div>
 
                         <div className='Home-TotalCasesGrid'>
                             <div>
                                 <p>Deaths</p>
-                                <div className='Home-Counter2'><span>{currentAllData.deaths}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.deaths}</span></div>
                             </div>
                             <div>
                                 <p>Recovered</p>
-                                <div className='Home-Counter2'><span>{currentAllData.recovered}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.recovered}</span></div>
                             </div>
                             <div>
                                 <p>Vaccinated</p>
-                                <div className='Home-Counter2'><span>{/* {currentAllData.} */}</span></div>
+                                <div className='Home-Counter2'><span>{/* {currentAll.} */}</span></div>
                             </div>
                             <div>
                                 <p>Active</p>
-                                <div className='Home-Counter2'><span>{currentAllData.active}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.active}</span></div>
                             </div>
                             <div>
                                 <p>Critical</p>
-                                <div className='Home-Counter2'><span>{currentAllData.critical}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.critical}</span></div>
                             </div>
                             <div>
                                 <p>Tests</p>
-                                <div className='Home-Counter2'><span>{currentAllData.tests}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.tests}</span></div>
                             </div>
                         </div>
 
                         <p>Population</p>
-                        <div className='Home-Counter1'><span>{currentAllData.population}</span></div>
+                        <div className='Home-Counter1'><span>{currentAll.population}</span></div>
                     </div>
                 </div>
             </div>
@@ -65,15 +64,15 @@ export const Home = () => {
                     <h1>Today</h1>
                     <div className='Home-Total'>
                         <p>Cases</p>
-                        <div className='Home-Counter1'><span style={{ fontWeight: 'bold', }}>{currentAllData.todayCases}</span></div>
+                        <div className='Home-Counter1'><span style={{ fontWeight: 'bold', }}>{currentAll.todayCases}</span></div>
                         <div className='Home-TodayCasesGrid'>
                             <div>
                                 <p>Deaths</p>
-                                <div className='Home-Counter2'><span>{currentAllData.todayDeaths}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.todayDeaths}</span></div>
                             </div>
                             <div>
                                 <p>Recovered</p>
-                                <div className='Home-Counter2'><span>{currentAllData.todayRecovered}</span></div>
+                                <div className='Home-Counter2'><span>{currentAll.todayRecovered}</span></div>
                             </div>
                         </div>
                     </div>

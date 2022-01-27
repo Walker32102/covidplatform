@@ -25,13 +25,14 @@ export const historicalCountriesVaccineCoverage = (e) => { return { type: 'histo
 export const historicalCountryVaccineCoverage = (e) => { return { type: 'historicalCountryVaccineCoverage', value: e } }
 /* ------------------------------------------------------------------------------------------------------------------------------------- */
 
+
+
 // Gets the Country Code
 export const getCountryCode = (countryName) => {
     return function (dispatch) {
         axios.get(`https://restcountries.com/v3/name/${countryName}`)
 
             .then(res => {
-                console.log(res.data[0].cca2);
                 dispatch(countryCode(res.data[0].cca2));
             })
             .catch(e => {
@@ -45,7 +46,6 @@ export const getCurrentAll = () => {
     return function (dispatch) {
         axios.get(`https://disease.sh/v3/covid-19/all`)
             .then(res => {
-                console.log(res.data);
                 dispatch(currentAll(res.data));
             })
             .catch(e => {
@@ -59,7 +59,6 @@ export const getCurrentCountriesC = (countryCode) => {
     return function (dispatch) {
         axios.get('https://disease.sh/v3/covid-19/countries/' + countryCode)
             .then(res => {
-                console.log(res.data);
                 dispatch(currentCountriesC(res.data));
             })
             .catch(e => {
@@ -101,7 +100,6 @@ export const getVaccineCoverage = () => {
     return function (dispatch) {
         axios.get('https://disease.sh/v3/covid-19/vaccine/coverage?lastdays=1&fullData=true')
             .then(res => {
-                console.log(res.data);
                 dispatch(allVaccineCoverage(res.data))
             })
             .catch(e => {
@@ -115,7 +113,6 @@ export const getCountryVaccineCoverage = (country) => {
     return function (dispatch) {
         axios.get(`https://disease.sh/v3/covid-19/vaccine/coverage/countries/${country}?lastdays=1&fullData=true`)
             .then(res => {
-                console.log(res.data);
                 dispatch(allVaccineCoverage(res.data))
             })
             .catch(e => {
@@ -130,7 +127,6 @@ export const getHistoricalCountriesVaccineCoverage = () => {
     return function (dispatch) {
         axios.get(`https://disease.sh/v3/covid-19/vaccine/coverage?lastdays=30&fullData=true`)
             .then(res => {
-                console.log(res.data);
                 dispatch(historicalCountryVaccineCoverage(res.data))
             })
             .catch(e => {
@@ -144,7 +140,6 @@ export const getHistoricalCountryVaccineCoverage = (country) => {
     return function (dispatch) {
         axios.get(`https://disease.sh/v3/covid-19/vaccine/${country}?lastdays=30&fullData=true`)
             .then(res => {
-                console.log(res.data);
                 dispatch(historicalCountryVaccineCoverage(res.data))
             })
             .catch(e => {
