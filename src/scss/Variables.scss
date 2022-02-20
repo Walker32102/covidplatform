@@ -1,0 +1,36 @@
+// Theme Colors-----------
+// Background
+$bg-1: #0f141b;
+$bg-2: #1a202b;
+$bg-3: #323947;
+$bg-4: #b7c3db;
+$bg-5: #ffffff;
+
+// Font Colors
+$font-cl-1: #ffffff;
+$font-cl-2:#b7c3db; 
+$font-cl-3: #000000;
+
+
+
+// Fonts-------------------
+// Family
+$font-main: Montserrat;
+
+// Weights
+$font-wgh-100: 100;
+$font-wgh-200: 200;
+$font-wgh-300: 300;
+$font-wgh-400: 400;
+$font-wgh-500: 500;
+$font-wgh-600: 600;
+$font-wgh-700: 700;
+$font-wgh-800: 800;
+$font-wgh-900: 900;
+
+// Main
+@media (max-width: 930px) {
+    #root {
+        height: auto;
+    }
+}

@@ -1,7 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getCurrentAll } from '../../store/corona/action';
 import { useEffect } from 'react';
-import './Home.css';
+// import './Home.css';
+import '../../scss/Home/Home.css';
 
 export const Home = () => {
 

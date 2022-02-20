@@ -1,0 +1,186 @@
+@import '../Variables.scss';
+
+.header {
+    width: 100%; 
+    height: 50px;
+    border-radius: 5px;
+    background-color: $bg-2;
+    display: flex;
+    user-select: none;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    &__section {
+        height: 100%;
+    }
+
+    // Links
+    &__sections {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        &--links {
+            text-decoration: none;
+            padding: 0 10px;
+            color: $font-cl-2;
+            font-size: 20px;
+        }
+    }
+
+    // Menu Button
+    &__optionsMenu {
+        display: none;
+
+        .header__submenu {
+            width: 60vw;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            position: fixed;
+            background-color: $bg-2;
+            display: flex;
+            transform: translateX(-100%);
+            transition: .2s ease;
+            flex-direction: column;
+            opacity: 0;
+
+            &--titleCont {
+                width: 100%;
+                margin-bottom: 2vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0;
+            }
+            &--title {
+                color: $font-cl-2;
+                font-weight: bold;
+                font-size: 4vw;
+            }
+
+            &--linksCont {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            &--links {
+                width: 100%;
+                height: 35px;
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+                padding-left: 20px;
+                text-decoration: none;
+                font-weight: bolder;
+                color: $font-cl-1;
+                font-size: 18px;
+                &:active {
+                    background-color: $bg-3;
+                    padding: 17px;
+                    border-left: 3px solid $bg-4;
+                }
+            }
+        }
+        &:hover .header__submenu {
+            transform: translateX(0%);
+            // background-color: aqua;
+        }
+    }
+
+    // Search
+    &__searchBar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--searchCont {
+            width: 450px;
+            height: 60%;
+            border: none;
+            border-radius: 5px;
+            background-color: $bg-3;
+            display: flex;
+            align-items: center; 
+        }
+        &--searchLogo {
+            padding: 0 8px;
+            color: $font-cl-2; 
+        }
+        &--searchInput {
+            width: 100%;
+            height: 80%;
+            border-left: 1px solid $bg-4;
+            background-color: transparent;
+            color: $font-cl-2;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            &::placeholder {
+                font-family: $font-main;
+                color: $bg-4+'3f';
+                font-weight: normal;
+            }
+        }
+    }
+
+    // Logo
+    &__logoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 25px;
+        &--title {
+            color: $font-cl-2;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+}
+
+@media (max-width: 930px) {
+    .header {
+
+        &__sections {
+            display: none;
+        }
+        
+        // Menu Button
+        &__optionsMenu {
+            width: 60px;
+            /* background-color: #fff; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &--menuIcon {
+                color: $font-cl-2;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
+            .header__submenu {
+                opacity: 1;
+            }
+        }
+
+        // Search
+        &__searchBar {
+            &--searchCont {
+                width: 100%;
+            }
+        }
+
+        // Logo
+        &__logoContainer {
+            margin: 0;
+            width: auto;
+            &--title {
+                display: none;
+            }
+        }
+
+    }
+}

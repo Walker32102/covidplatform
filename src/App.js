@@ -1,4 +1,3 @@
-// import { Router } from './components/Router';
 import { Router } from './components/components';
 import './App.css';
 
