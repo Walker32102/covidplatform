@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getCurrentAll } from '../../store/corona/action';
 import { useEffect } from 'react';
-// import './Home.css';
 import '../../scss/Home/Home.css';
 
 export const Home = () => {
@@ -15,70 +14,71 @@ export const Home = () => {
     }, [dispatch])
 
     return (
-        <div className='Home'>
+        <div className='home'>
 
-            <div className='Home-Containers Home-TotalCounterContainer'>
-                <div className='Home-TotalCounter'>
+            <div className='home__conts home__totalCounterCont'>
+                <div className='home__totalCounter'>
 
-                    <h1>WOLRD</h1>
+                    <h1 className='home__totalCounter--title'>WOLRD</h1>
 
-                    <div className='Home-Total'>
+                    <div className='home__totalCounter__total'>
 
-                        <p>Total Cases</p>
-                        <div className='Home-Counter1'><span style={{ fontWeight: 'bold' }}>{currentAll.cases}</span></div>
+                        <p className='home__totalCounter__total--subtitle'>Total Cases</p>
 
-                        <div className='Home-TotalCasesGrid'>
-                            <div>
-                                <p>Deaths</p>
-                                <div className='Home-Counter2'><span>{currentAll.deaths}</span></div>
+                        <div className='home__counter1'><span style={{ fontWeight: 'bold' }}>{currentAll.cases}</span></div>
+
+                        <div className='home__totalCasesGrid'>
+                            <div className='home__totalCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Deaths</p>
+                                <div className='home__counter2'><span>{currentAll.deaths}</span></div>
                             </div>
-                            <div>
-                                <p>Recovered</p>
-                                <div className='Home-Counter2'><span>{currentAll.recovered}</span></div>
+                            <div className='home__totalCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Recovered</p>
+                                <div className='home__counter2'><span>{currentAll.recovered}</span></div>
                             </div>
-                            <div>
-                                <p>Vaccinated</p>
-                                <div className='Home-Counter2'><span>{/* {currentAll.} */}</span></div>
+                            <div className='home__totalCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Vaccinated</p>
+                                <div className='home__counter2'><span>{/* {currentAll.} */}</span></div>
                             </div>
-                            <div>
-                                <p>Active</p>
-                                <div className='Home-Counter2'><span>{currentAll.active}</span></div>
+                            <div className='home__totalCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Active</p>
+                                <div className='home__counter2'><span>{currentAll.active}</span></div>
                             </div>
-                            <div>
-                                <p>Critical</p>
-                                <div className='Home-Counter2'><span>{currentAll.critical}</span></div>
+                            <div className='home__totalCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Critical</p>
+                                <div className='home__counter2'><span>{currentAll.critical}</span></div>
                             </div>
-                            <div>
-                                <p>Tests</p>
-                                <div className='Home-Counter2'><span>{currentAll.tests}</span></div>
+                            <div className='home__totalCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Tests</p>
+                                <div className='home__counter2'><span>{currentAll.tests}</span></div>
                             </div>
                         </div>
 
-                        <p>Population</p>
-                        <div className='Home-Counter1'><span>{currentAll.population}</span></div>
+                        <p className='home__totalCounter__total--subtitle'>Population</p>
+                        <div className='home__counter1'><span>{currentAll.population}</span></div>
                     </div>
                 </div>
             </div>
 
-            <div className='Home-Containers Home-OthersContainer'>
-                <div className='Home-TotalCounter' style={{ marginBottom: '10px' }}>
-                    <h1>Today</h1>
-                    <div className='Home-Total'>
-                        <p>Cases</p>
-                        <div className='Home-Counter1'><span style={{ fontWeight: 'bold', }}>{currentAll.todayCases}</span></div>
-                        <div className='Home-TodayCasesGrid'>
-                            <div>
-                                <p>Deaths</p>
-                                <div className='Home-Counter2'><span>{currentAll.todayDeaths}</span></div>
+            <div className='home__conts home__othersCont'>
+                <div className='home__totalCounter' style={{ marginBottom: '10px' }}>
+                    <h1 className='home__totalCounter--title'>Today</h1>
+                    <div className='home__total'>
+                        <p className='home__totalCounter__total--subtitle'>Cases</p>
+                        <div className='home__counter1'><span style={{ fontWeight: 'bold', }}>{currentAll.todayCases}</span></div>
+                        <div className='home__todayCasesGrid'>
+                            <div className='home__todayCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Deaths</p>
+                                <div className='home__counter2'><span>{currentAll.todayDeaths}</span></div>
                             </div>
-                            <div>
-                                <p>Recovered</p>
-                                <div className='Home-Counter2'><span>{currentAll.todayRecovered}</span></div>
+                            <div className='home__todayCasesGrid--cont'>
+                                <p className='home__counter1--subtitle'>Recovered</p>
+                                <div className='home__counter2'><span>{currentAll.todayRecovered}</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='Home-TotalCounter'>
+                <div className='home__totalCounter'>
 
                 </div>
             </div>

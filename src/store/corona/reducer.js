@@ -20,10 +20,10 @@ const reducer = (state = coronaAllData, action) => {
     let time = state;
     switch (action.type) {
 
-/*         case 'countryCode':
-            time.countryCode = action.value;
-            break;
- */
+        // case 'countryCode':
+        //     time.countryCode = action.value;
+        //     break;
+
         // All Countries -------------------------------------
         case 'currentAll':
             time.currentAll = action.value;

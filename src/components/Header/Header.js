@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from '../../assets/img/corona.png';
 import { ReactComponent as SearchLogo } from '../../assets/svg/search.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faGlobeAmericas, faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Search = (props) => {
 
@@ -45,8 +45,14 @@ export const Header = (props) => {
                     </div>
 
                     <div className='header__submenu--linksCont'>
-                        <Link className='header__submenu--links' to='/'>Home</Link>
-                        <Link className='header__submenu--links' to='/worldmeters'>Worldmeters</Link>
+                        <Link className='header__submenu--links' to='/'>
+                            <FontAwesomeIcon icon={faHome} className='header__submenu--menuIcon' />
+                            Home
+                        </Link>
+                        <Link className='header__submenu--links' to='/worldmeters'>
+                            <FontAwesomeIcon icon={faGlobeAmericas} className='header__submenu--menuIcon' />
+                            Worldmeters
+                        </Link>
                     </div>
 
                 </div>

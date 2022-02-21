@@ -1,10 +1,50 @@
 /* 930px min width */
 
+/* --------------Scroll-------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a202b;
+  border: 2px solid #0f141b;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #323947;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #2d333e;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none transparent;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #0d1118;
+}
+::-webkit-scrollbar-track:active {
+  background: #0f141b;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/* --------------Scroll-------------- */
+
 *{
   box-sizing: border-box;
   outline: none;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: #0f141b;
 }
 
 .App {
