@@ -26,6 +26,9 @@
             color: $font-cl-2;
             font-size: 20px;
         }
+        &--bold{
+            font-weight: bold;
+        }
     }
 
     // Menu Button
@@ -164,7 +167,6 @@
         // Menu Button
         &__optionsMenu {
             width: 60px;
-            /* background-color: #fff; */
             display: flex;
             justify-content: center;
             align-items: center;

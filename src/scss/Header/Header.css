@@ -44,6 +44,10 @@
   font-size: 20px;
 }
 
+.header__sections--bold {
+  font-weight: bold;
+}
+
 .header__optionsMenu {
   display: none;
 }
@@ -241,7 +245,6 @@
   }
   .header__optionsMenu {
     width: 60px;
-    /* background-color: #fff; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

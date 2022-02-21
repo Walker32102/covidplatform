@@ -30,7 +30,7 @@ export const Header = (props) => {
         <header className='header'>
 
             <div className='header__section header__sections'>
-                <Link className='header__sections--links' style={{ fontWeight: 'bold' }} to='/'>Home</Link>
+                <Link className='header__sections--links header__sections--bold' to='/'>Home</Link>
                 <Link className='header__sections--links' to='/worldmeters'>Worldmeters</Link>
             </div>
 

@@ -25,7 +25,7 @@ export const Home = () => {
 
                         <p className='home__totalCounter__total--subtitle'>Total Cases</p>
 
-                        <div className='home__counter1'><span style={{ fontWeight: 'bold' }}>{currentAll.cases}</span></div>
+                        <div className='home__counter1'><span className='home__counterMain'>{currentAll.cases}</span></div>
 
                         <div className='home__totalCasesGrid'>
                             <div className='home__totalCasesGrid--cont'>
@@ -61,11 +61,11 @@ export const Home = () => {
             </div>
 
             <div className='home__conts home__othersCont'>
-                <div className='home__totalCounter' style={{ marginBottom: '10px' }}>
+                <div className='home__totalCounter home__tCMargin'>
                     <h1 className='home__totalCounter--title'>Today</h1>
                     <div className='home__total'>
                         <p className='home__totalCounter__total--subtitle'>Cases</p>
-                        <div className='home__counter1'><span style={{ fontWeight: 'bold', }}>{currentAll.todayCases}</span></div>
+                        <div className='home__counter1'><span className='home__counterMain'>{currentAll.todayCases}</span></div>
                         <div className='home__todayCasesGrid'>
                             <div className='home__todayCasesGrid--cont'>
                                 <p className='home__counter1--subtitle'>Deaths</p>

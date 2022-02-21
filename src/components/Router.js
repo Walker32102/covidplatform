@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import debounce from 'lodash.debounce';
 import { Header } from './Header/Header';
+import '../scss/Router/Router.css'
 
 export const Router = () => {
 
@@ -36,7 +37,7 @@ export const Router = () => {
     })
 
     return (
-        <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <div className='router'>
             <BrowserRouter>
 
                 <Header onChange={(e) => { onHandleChange(e.target.value) }} />

@@ -73,6 +73,10 @@
           user-select: none;
 }
 
+.home__tCMargin {
+  margin-bottom: 10px;
+}
+
 .home__counter1, .home__counter2 {
   width: 100%;
   border-radius: 10px;
@@ -110,6 +114,16 @@
   height: 60px;
 }
 
+.home__counterMain {
+  font-weight: bold;
+}
+
+.home__counterMain--flag {
+  width: 70px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
 .home__totalCasesGrid {
   margin: 20px 0;
   width: 100%;
@@ -128,8 +142,6 @@
 
 .home__totalCasesGrid--cont {
   width: 100%;
-  /* height: 100%; */
-  /* background-color: #fff; */
 }
 
 .home__todayCasesGrid {
@@ -148,8 +160,6 @@
 
 .home__todayCasesGrid--cont {
   width: 100%;
-  /* height: 100%; */
-  /* background-color: #fff; */
 }
 
 @media (max-width: 930px) {
