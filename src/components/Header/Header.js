@@ -67,7 +67,7 @@ export const Header = (props) => {
 
             <div className='header__section header__logoContainer'>
                 <span className='header__logoContainer--title'>CovidPlatform</span>
-                <img alt='logo' src={logo} width='50' />
+                {/* <img alt='logo' src={logo} width='50' /> */}
             </div>
 
         </header>
