@@ -40,7 +40,7 @@ export const Router = () => {
         <div className='router'>
             <BrowserRouter>
 
-                <Header onChange={(e) => { onHandleChange(e.target.value) }} />
+                {/* <Header onChange={(e) => { onHandleChange(e.target.value) }} /> */}
 
                 <Routes>
                     <Route path='/' exact element={<Home />} />
