@@ -59,7 +59,6 @@
                 padding: 10px 0;
                 background-color: $bg-1;
                 border-top-right-radius: 15px;
-                // border-bottom-right-radius: 15px;
 
             }
             &--title {
@@ -102,7 +101,6 @@
         }
         &:hover .header__submenu {
             transform: translateX(0%);
-            // background-color: aqua;
         }
     }
 
