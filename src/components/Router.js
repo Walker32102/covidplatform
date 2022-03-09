@@ -21,7 +21,7 @@ export const Router = () => {
     }
 
     const getCountryCode = async () => {
-        const countryNameData = await axios.get(`https://restcountries.com/v3/name/${searchInput}`);
+        const countryNameData = await axios.get(`https://restcountries.com/v3/name/${searchInput}?fields=cca2`);
         try {
             return countryNameData.data[0].cca2;
         } catch (e) {

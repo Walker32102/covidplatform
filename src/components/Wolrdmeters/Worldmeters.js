@@ -12,7 +12,9 @@ export const Worldmeters = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getCurrentCountriesC(input));
+        if (input) {
+            dispatch(getCurrentCountriesC(input));
+        }
     }, [dispatch, input])
 
     return (
@@ -29,9 +31,9 @@ export const Worldmeters = (props) => {
                             <span className='home__counterMain'>{currentCountriesC.country}</span>
                             {input ?
                                 <img
-                                alt='flag'
-                                className='home__counterMain--flag'
-                                src={`https://flagcdn.com/${input}.svg`} /> : ''
+                                    alt='flag'
+                                    className='home__counterMain--flag'
+                                    src={`https://flagcdn.com/${input}.svg`} /> : ''
                             }
                         </div>
 
